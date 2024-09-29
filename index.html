@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Repayment Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+  <script defer src="main.fc8f19032cf076b5ea8c.js"></script></head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="calculator-container">
+          <div class="calculator-container-heading">
+            <h2>Mortgage Calculator</h2>
+            <button class="clear-all">Clear All</button>
+          </div>
+          <form class="mortgage-form">
+            <div class="amount-wrapper">
+              <label for="mortgage-amount">Mortgage Amount</label>
+              <div class="input-wrapper amount-input-wrapper">
+                <p class="input-sign amount-input-sign">£</p>
+                <input
+                  type="text"
+                  id="mortgage-amount"
+                  inputmode="numeric"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  autocomplete="off"
+                />
+              </div>
+              <span class="amount-error"></span>
+            </div>
+            <div class="term-interest-wrapper">
+              <div class="mortgage-term-wrapper">
+                <label for="mortgage-term">Mortgage Term</label>
+                <div class="input-wrapper term-input-wrapper">
+                  <input
+                    type="text"
+                    id="mortgage-term"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                    autocomplete="off"
+                  />
+                  <p class="input-sign term-sign">years</p>
+                </div>
+                <span class="term-error"></span>
+              </div>
+              <div class="interest-rate-wrapper">
+                <label for="interest-rate">Interest Rate</label>
+                <div class="input-wrapper rate-input-wrapper">
+                  <input
+                    type="text"
+                    id="interest-rate"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                    autocomplete="off"
+                  />
+                  <p class="input-sign rate-sign">%</p>
+                </div>
+                <span class="rate-error"></span>
+              </div>
+            </div>
+            <div class="mortgage-type-wrapper">
+              <h3>Mortgage Type</h3>
+              <div class="repayment-wrapper">
+                <input
+                  type="radio"
+                  id="repayment"
+                  value="repayment"
+                  name="mortgage-type"
+                />
+                <span class="repayment-span">Repayment</span>
+              </div>
+              <div class="interest-only-wrapper">
+                <input
+                  type="radio"
+                  id="interest-only"
+                  value="interest-only"
+                  name="mortgage-type"
+                />
+                <span class="interest-only-span">Interest Only</span>
+              </div>
+              <span class="morg-type-error"></span>
+            </div>
+            <button class="calculate-btn" type="submit">
+              <img src="assets/icon-calculator.svg" alt="calculator icon" />
+              <span>Calculate Repayments</span>
+            </button>
+          </form>
+        </div>
+        <div class="results-container">
+          <div class="empty-results-container">
+            <img
+              src="assets/illustration-empty.svg"
+              alt="empy illustration"
+            />
+            <h3>Results shown here</h3>
+            <p>
+              Complete the form and click "calculate repayments" to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
