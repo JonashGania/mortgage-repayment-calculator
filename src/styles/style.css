@@ -146,11 +146,14 @@ input[type="radio"]:checked::after {
   padding: 0.7rem;
   font-weight: 600;
   background-color: var(--Slate100);
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 3px 0px 0px 3px;
+}
+.term-sign,
+.rate-sign {
+  border-radius: 0px 3px 3px 0px;
 }
 .term-interest-wrapper {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 .mortgage-term-wrapper,
@@ -224,4 +227,103 @@ input[type="radio"]:checked::after {
   font-weight: 300;
   font-size: 0.9rem;
   text-align: center;
+}
+.results-container-wrapper h2 {
+  color: var(--Slate100);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+.results-container-wrapper p {
+  color: var(--Slate300);
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding-bottom: 2.5rem;
+}
+.result-card-container {
+  width: 100%;
+  background-color: #0d212c;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-top: 3px solid var(--lime);
+}
+.monthly-repayment-results {
+  border-bottom: 1px solid var(--Slate700);
+}
+.total-repayment-results {
+  padding-top: 1.5rem;
+}
+.monthly-repayment-results span {
+  color: var(--Slate300);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.total-repayment-results span {
+  color: var(--Slate300);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.monthly-repayments {
+  color: var(--lime);
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
+}
+.total-repayments {
+  color: var(--White);
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.term-error,
+.amount-error,
+.rate-error,
+.morg-type-error {
+  font-size: 0.8rem;
+  color: var(--Red);
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .calculator-container,
+  .results-container {
+    width: 100%;
+  }
+  .results-container {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .calculator-container,
+  .results-container {
+    padding: 1rem 1rem;
+  }
+  .calculator-container-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .term-interest-wrapper {
+    flex-wrap: wrap;
+  }
+  .mortgage-term-wrapper,
+  .interest-rate-wrapper {
+    width: 100%;
+  }
+  form {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+  .calculate-btn {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .monthly-repayments {
+    font-size: 2rem;
+  }
 }
